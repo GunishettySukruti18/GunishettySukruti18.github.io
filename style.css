@@ -1,0 +1,124 @@
+#typing-name::after,
+#typing-role::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+body {
+    animation: fadeInPage 1s ease;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(56, 189, 248, 0.25);
+}
+
+.skills span {
+    transition: all 0.3s ease;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+    background: #38bdf8;
+    color: #000;
+}
+
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    white-space: nowrap;
+}
+
+.hero-text .tagline {
+    font-size: 0.95rem;
+    color: #38bdf8;
+    margin-top: 10px;
+   
+}
+
+.hero-text .description {
+    font-size: 0.95rem;
+    margin-top: 15px;
+    color: #94a3b8;
+}
+
+
+.card p:nth-of-type(2) {
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.btn {
+    background: #38bdf8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 20px rgba(56, 189, 248, 0.4);
+}
+
+.hero-image img {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-image {
+    background: rgba(56,189,248,0.1);
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.hero-image:hover {
+    box-shadow: 0 0 60px rgba(56,189,248,0.2);
+}

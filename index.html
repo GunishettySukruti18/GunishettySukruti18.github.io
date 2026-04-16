@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunishetty Sukruti | AI Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Hero (FIXED SPACING) */
+.hero {
+    padding: 70px 10% 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero-text {
+    width: 65%;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    white-space: nowrap;
+}
+
+.hero-text span {
+    color: #38bdf8;
+}
+
+.tagline {
+    color: #38bdf8;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #94a3b8;
+}
+
+/* Image */
+.hero-image {
+    background: rgba(56,189,248,0.1);
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+    transition: 0.4s;
+}
+
+.hero-image:hover {
+    box-shadow: 0 0 60px rgba(56,189,248,0.2);
+}
+
+.hero-image img:hover {
+    transform: scale(1.08);
+}
+
+/* Buttons */
+.btn {
+    background: #38bdf8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(56,189,248,0.4);
+}
+
+/* Sections (FIXED SPACING) */
+section {
+    padding: 45px 10%;
+}
+
+/* Headings */
+h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(56,189,248,0.2);
+}
+
+/* Links */
+.cert-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cert-hint {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #334155;
+    color: #38bdf8;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    background: #475569;
+    color: #0ea5e9;
+}
+
+/* Text */
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Achievements */
+.achievement-card p {
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+/* Stats */
+.stats-card {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+/* Skills */
+.skills span {
+    display: inline-block;
+    background: #334155;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* Contact */
+.contact-buttons {
+    margin-top: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+/* 🔥 SMOOTH SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3 class="logo">   </h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#internship">Internship</a>
+        <a href="#certifications">Certifications</a>
+        <a href="https://github.com/GunishettySukruti18" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sukruti-gunishetty-115814295/" target="_blank">LinkedIn</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Gunishetty Sukruti</span></h1>
+
+        <p class="tagline">
+        AI Engineer | ML Enthusiast | Data Analyst
+        </p>
+
+        <p>
+            Aspiring AI Engineer specializing in Machine Learning and Data Analytics, 
+            focused on building impactful real-world intelligent systems.
+        </p>
+        
+        <a href="https://drive.google.com/file/d/1cjxZhud9O8RMqbUO_6ZuM90DVQRf7Zww/view?usp=drive_link" target="_blank" class="btn">Download Resume</a>
+    </div>
+    <div class="hero-image">
+        <img src="C:\Users\sukru\OneDrive\Desktop\portfolio files\portfolio image.jpeg" alt="Gunishetty Sukruti">
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>B.Tech in Computer Science - 2027 </h3>
+        <p>SR University | CGPA: 8.96</p>
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Highlights</h2>
+    <div class="grid">
+        <div class="card stats-card">3+ Projects</div>
+        <div class="card stats-card">1 Hackathon Win</div>
+        <div class="card stats-card">1 Patent Published</div>
+    </div>
+</section>
+
+<section id="about" class="fade">
+    <h2>About Me</h2>
+    <p>
+        Driven Computer Science professional with expertise in Artificial Intelligence, Machine Learning, and Data Analytics. Proven track record of developing innovative AI-powered solutions that address real-world challenges and improve operational efficiency. Skilled in designing intelligent systems, predictive modeling, and data-driven decision-making. Committed to leveraging cutting-edge technologies to deliver measurable business impact.
+    </p>
+</section>
+
+<section class="fade">
+    <h2>Skills</h2>
+
+    <div class="grid">
+
+        <!-- Technical Skills -->
+        <div class="card">
+            <h3>Technical Skills</h3>
+            <div class="skills">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Java (Basics)</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Machine Learning</span>
+                <span>Artificial Intelligence</span>
+                <span>Data Structures</span>
+                <span>Operating Systems</span>
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>VS Code</span>
+                <span>Google Colab</span>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <div class="skills">
+                <span>Communication</span>
+                <span>Teamwork</span>
+                <span>Time Management</span>
+                <span>Problem Solving</span>
+                <span>Adaptability</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects" class="fade">
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Hospital Recommendation System</h3>
+            <p>
+                Developed an AI-powered system that recommends the top 3 nearest hospitals 
+                based on real-time GPS data and patient condition, improving emergency response efficiency.
+            </p>
+            <p><strong>Tech:</strong> Python, Machine Learning, Geo-location APIs</p>
+            <a href="https://github.com/GunishettySukruti18/Hospital_Recommendation_System" target="_blank" class="github-link">
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Machine Fault Prediction</h3>
+            <p>
+                Developed a predictive maintenance system using AIoT to forecast industrial machine failures 
+                7–14 days in advance by analyzing sensor data such as vibration, temperature, and current. 
+                Enhanced operational efficiency by enabling early fault detection and reducing downtime.
+                </p>
+            <p><strong>Tech:</strong> Python, AIoT, Machine Learning, Sensor Data Analysis</p>
+            <a href="https://github.com/GunishettySukruti18/Machine_Fault_prediction" target="_blank" class="github-link">
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>AI Image Generator</h3>
+            <p>
+                Built a generative AI system capable of creating images from text prompts using deep learning models. 
+                Improved output quality by optimizing prompt engineering techniques and fine-tuning model parameters 
+                for more accurate and visually coherent results.
+                </p>
+            <p><strong>Tech:</strong> Python, Deep Learning, Prompt Engineering, Neural Networks</p>
+            <a href="https://github.com/GunishettySukruti18/Image-Generation-using-Prompt-Engineering-" target="_blank" class="github-link">
+                View on GitHub
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="internship" class="fade">
+    <h2>Internship</h2>
+    <div class="card">
+        <h3>AIoT & Applications Training – NIT Warangal</h3>
+        <p>
+            Gained hands-on experience in IoT architecture, sensor integration, and real-time data collection.
+            Built AI models for predictive analytics and developed smart monitoring prototypes.
+        </p>
+    </div>
+</section>
+
+<section id="certifications" class="fade">
+    <h2>Certifications</h2>
+    <div class="grid">
+
+        <a href="https://drive.google.com/file/d/1W2Q5wqIGk66ToWUYoYihfp2Kf66ozEiD/view?usp=drive_link" target="_blank" class="cert-link">
+            <div class="card">
+                <h3>Microsoft Azure AI Fundamentals (AI-900)</h3>
+                <p class="cert-hint">Click to view</p>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1eGYCGlCBFIUA3PpGLrL5JAhI2KpG28_B/view?usp=drive_link" target="_blank" class="cert-link">
+            <div class="card">
+                <h3>HackerRank Python Certification</h3>
+                <p class="cert-hint">Click to view</p>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1a10tf8AxZN88f4hMKBpqaC3ZtMXroEFe/view?usp=drive_link" target="_blank" class="cert-link">
+            <div class="card">
+                <h3>AWS Academy Graduate</h3>
+                <p class="cert-hint">Click to view</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Achievements</h2>
+    <div class="card achievement-card">
+    <p>🏆 Winner – TechStorm Hackathon 2025</p>
+    <p>📜 Patent: Smart AI-Driven Virtual Workspace</p>
+</div>
+</section>
+
+<section id="contact" class="fade">
+    <h2>Contact</h2>
+    <p>Email: sukrutigunishetty18@gmail.com | Phone: 6301088960</p>
+
+
+
+    <div class="contact-buttons">
+        <a href="https://github.com/GunishettySukruti18" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/sukruti-gunishetty-115814295/" target="_blank" class="btn">LinkedIn</a>
+    </div>
+</section>
+
+<footer>
+    <p>© <span id="year"></span> Gunishetty Sukruti</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach((el, index) => {
+        const rect = el.getBoundingClientRect().top;
+        if(rect < window.innerHeight - 100){
+            setTimeout(() => {
+                el.classList.add('show');
+            }, index * 100); // stagger delay
+        }
+    });
+});
+</script>
+<script>
+const nameText = "Gunishetty Sukruti";
+const roles = ["AI Engineer", "ML Enthusiast", "Data Analyst"];
+
+let i = 0, j = 0;
+let currentRole = "";
+let isDeleting = false;
+
+// Typing name (runs once)
+function typeName() {
+    if (i < nameText.length) {
+        document.getElementById("typing-name").textContent += nameText.charAt(i);
+        i++;
+        setTimeout(typeName, 100);
+    }
+}
+
+// Typing roles (loop)
+function typeRole() {
+    const roleElement = document.getElementById("typing-role");
+
+    if (!isDeleting && j < roles[currentRoleIndex].length) {
+        roleElement.textContent += roles[currentRoleIndex].charAt(j);
+        j++;
+        setTimeout(typeRole, 80);
+    } 
+    else if (isDeleting && j > 0) {
+        roleElement.textContent = roles[currentRoleIndex].substring(0, j - 1);
+        j--;
+        setTimeout(typeRole, 40);
+    } 
+    else {
+        isDeleting = !isDeleting;
+
+        if (!isDeleting) {
+            currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+        }
+
+        setTimeout(typeRole, 1000);
+    }
+}
+
+let currentRoleIndex = 0;
+
+// Run animations
+typeName();
+setTimeout(typeRole, 1500);
+</script>
+</body>
+</html>
