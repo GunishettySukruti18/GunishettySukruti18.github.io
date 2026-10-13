@@ -247,27 +247,49 @@ body {
     box-shadow: 0 0 60px rgba(56, 189, 248, 0.2);
 }
 
-/* Education section */
+
+/* Education card layout fix */
 .education-card {
+    background: #1e293b;
+    padding: 28px 25px;
+    border-radius: 20px;
     width: 100%;
     box-sizing: border-box;
+    margin: 25px 0 40px;
 }
 
 .education-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
 }
 
 .education-header h3 {
     margin: 0;
+    font-size: 1.35rem;
     flex: 1;
 }
 
 .education-year {
-    margin-left: auto;
     white-space: nowrap;
     flex-shrink: 0;
+    margin-left: auto;
+}
+
+.education-card p {
+    margin: 20px 0 0;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .education-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .education-header h3 {
+        font-size: 1.05rem;
+    }
 }
