@@ -271,19 +271,3 @@ body {
     white-space: nowrap;
     flex-shrink: 0;
 }
-
-/* Mobile layout */
-@media (max-width: 600px) {
-    .education-header {
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .education-header h3 {
-        font-size: 1rem;
-    }
-
-    .education-year {
-        font-size: 0.85rem;
-    }
-}
