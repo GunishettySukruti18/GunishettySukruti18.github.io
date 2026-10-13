@@ -179,3 +179,42 @@ body {
         font-size: 0.85rem;
     }
 }
+.education-card {
+    background: #1e293b;
+    padding: 28px 25px;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.education-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.education-year {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.education-card p {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .education-header {
+        align-items: flex-start;
+    }
+
+    .education-header h3 {
+        font-size: 1rem;
+    }
+}
