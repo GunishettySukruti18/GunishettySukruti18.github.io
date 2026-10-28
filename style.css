@@ -122,15 +122,30 @@ body {
     box-shadow: 0 0 60px rgba(56, 189, 248, 0.2);
 }
 
-/* Education card */
-.education-card {
-    background: #1e293b;
-    padding: 28px 25px;
-    border-radius: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 25px 0 40px;
+
+/* Final fix for Education alignment */
+.education-card .education-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 15px !important;
 }
+
+.education-card .education-degree {
+    flex: 1 1 auto !important;
+    margin: 0 !important;
+}
+
+.education-card .education-year {
+    margin-left: auto !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
 
 /* Degree on left and year on right */
 .education-card .education-degree {
