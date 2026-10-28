@@ -202,6 +202,10 @@ body {
     white-space: nowrap !important;
     margin-left: auto !important;
 }
+
+    .education-card .education-year {
+    font-weight: 700;
+}
     .education-card .education-year {
         font-size: 0.8rem;
     }
