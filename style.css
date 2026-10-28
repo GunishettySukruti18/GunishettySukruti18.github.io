@@ -185,6 +185,23 @@ body {
         gap: 8px;
     }
 
+    .education-card .education-degree {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 15px !important;
+}
+
+.education-card .education-degree > span:first-child {
+    flex: 1;
+}
+
+.education-card .education-year {
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    margin-left: auto !important;
+}
     .education-card .education-year {
         font-size: 0.8rem;
     }
